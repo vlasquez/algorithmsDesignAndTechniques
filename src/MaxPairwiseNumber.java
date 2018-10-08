@@ -85,18 +85,26 @@ public class MaxPairwiseNumber {
     }
   }
 
+  /** Stress test for an algorithm
+   *
+   * @param n length of the mock array
+   * @param m interval of random values (from 0 to m)
+   */
   static void stressTestMaxPairwiseProduct(int n, int m){
     long result1, result2;
     int rnd1;
     Random r = new Random();
+
+    /** 1. Create an infinite loop **/
     while (true){
+      /** 2. Random test generator **/
       rnd1 = r.nextInt(n - 2) + 2;
       int[] numbers = new int[rnd1];
 
       for (int i = 0; i < rnd1; ++i ){
         numbers[i] = r.nextInt(m);
       }
-
+      /** 3. An alternative, trivial and slow, but correct implementation of an algorithm **/
       result1 = getNaiveMaxPairwiseProduct(numbers);
       result2 = getMaxPairwiseProductFast(numbers);
       if(result1 == result2){
