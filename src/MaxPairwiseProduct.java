@@ -9,20 +9,20 @@ import java.util.StringTokenizer;
  * @autor Andrés Velasquez
  * @since 7/10/18
  **/
-public class MaxPairwiseNumber {
+public class MaxPairwiseProduct {
   public static void main(String [] args)
   {
-    /*FastScanner scanner = new FastScanner(System.in);
+    FastScanner scanner = new FastScanner(System.in);
     int n = scanner.nextInt();
     int[] numbers = new int[n];
     for (int i = 0; i < n; i++) {
       numbers[i] = scanner.nextInt();
-    }*/
-    int[] numbers2 = new int[]{2,9,3,1,9};
-    //System.out.println(getNaiveMaxPairwiseProduct(numbers));
-    //System.out.println(getMaxPairwiseProductFast(numbers2));
+    }
 
-    stressTestMaxPairwiseProduct(10,100000);
+    //System.out.println(getNaiveMaxPairwiseProduct(numbers));
+    System.out.println(getMaxPairwiseProductFast(numbers));
+
+    //stressTestMaxPairwiseProduct(10,100000);
   }
 
   static long getNaiveMaxPairwiseProduct(int[] numbers){
@@ -32,7 +32,7 @@ public class MaxPairwiseNumber {
     for (int i = 0; i<n; ++i ){
       for(int j = i +1; j<n; ++j){
         long tmp =(long) numbers[i]*numbers[j];
-          product = Math.max(product,tmp);
+        product = Math.max(product,tmp);
       }
     }
     return product;
