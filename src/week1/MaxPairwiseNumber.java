@@ -1,3 +1,5 @@
+package week1;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,20 +11,20 @@ import java.util.StringTokenizer;
  * @autor Andrés Velasquez
  * @since 7/10/18
  **/
-public class MaxPairwiseProduct {
+public class MaxPairwiseNumber {
   public static void main(String [] args)
   {
-    FastScanner scanner = new FastScanner(System.in);
+    /*FastScanner scanner = new FastScanner(System.in);
     int n = scanner.nextInt();
     int[] numbers = new int[n];
     for (int i = 0; i < n; i++) {
       numbers[i] = scanner.nextInt();
-    }
-
+    }*/
+    int[] numbers2 = new int[]{2,9,3,1,9};
     //System.out.println(getNaiveMaxPairwiseProduct(numbers));
-    System.out.println(getMaxPairwiseProductFast(numbers));
+    //System.out.println(getMaxPairwiseProductFast(numbers2));
 
-    //stressTestMaxPairwiseProduct(10,100000);
+    stressTestMaxPairwiseProduct(10,100000);
   }
 
   static long getNaiveMaxPairwiseProduct(int[] numbers){
@@ -32,7 +34,7 @@ public class MaxPairwiseProduct {
     for (int i = 0; i<n; ++i ){
       for(int j = i +1; j<n; ++j){
         long tmp =(long) numbers[i]*numbers[j];
-        product = Math.max(product,tmp);
+          product = Math.max(product,tmp);
       }
     }
     return product;
