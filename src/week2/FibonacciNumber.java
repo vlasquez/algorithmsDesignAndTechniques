@@ -7,9 +7,9 @@ package week2;
 public class FibonacciNumber {
 
   public static void main(String[] args) {
-    int fibonacciNumber = 327305;
+    int fibonacciNumber = 239;
     //System.out.println(fibonacciNaiveSolution(fibonacciNumber));
-    System.out.println(fibonacciLastDigitFastSolution(fibonacciNumber));
+    System.out.println(fibonacciFastSolution(fibonacciNumber));
   }
 
   static int fibonacciNaiveSolution(int n) {
@@ -20,11 +20,11 @@ public class FibonacciNumber {
     return fibonacciNaiveSolution(n - 1) + fibonacciNaiveSolution(n - 2);
   }
 
-  static int fibonacciFastSolution(int n) {
+  static long fibonacciFastSolution(int n) {
     if (n <= 1) {
       return n;
     }
-    int[] nFibonacci = new int[n + 1];
+    long[] nFibonacci = new long[n + 1];
     nFibonacci[0] = 0;
     nFibonacci[1] = 1;
 
