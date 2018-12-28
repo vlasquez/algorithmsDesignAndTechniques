@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 public class FibonacciModNumber {
     public static void main(String[] args) {
-        long fibonacciNumber = 239 , mod = 1000;
+        long fibonacciNumber = 239 , mod = 10;
         //System.out.println(fibonacciNaiveSolution(fibonacciNumber));
         System.out.println(fibonacciModNumberNaive(fibonacciNumber, BigInteger.valueOf(mod)));
     }
