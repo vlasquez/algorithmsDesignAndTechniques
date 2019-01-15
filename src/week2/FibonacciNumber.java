@@ -6,11 +6,7 @@ package week2;
  **/
 public class FibonacciNumber {
 
-  public static void main(String[] args) {
-    int fibonacciNumber = 239;
-    //System.out.println(fibonacciNaiveSolution(fibonacciNumber));
-    System.out.println(fibonacciFastSolution(fibonacciNumber));
-  }
+
 
   static int fibonacciNaiveSolution(int n) {
     if (n <= 1) {
