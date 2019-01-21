@@ -1,13 +1,15 @@
 package week3;
 
+import java.util.Scanner;
+
 public class OnlineAdPlacement {
 
   public static void main (String[] args){
-    int[] a = new int[]{1,3,-5};
-    int[]b = new int[]{-2,4,1};
+    long[] a = new long[]{1,3,-5};
+    long[]b = new long[]{-2,4,1};
     System.out.println(maxDotProduct(a,b));
   }
-  public static long maxDotProduct(int[]a, int[] b){
+  public static long maxDotProduct(long[]a, long[] b){
     long res = 0;
     a= sortArray(a);
     b=sortArray(b);
@@ -18,9 +20,9 @@ public class OnlineAdPlacement {
     }
     return res;
   }
-  public static int[] sortArray(int[]a){
+  public static long[] sortArray(long[]a){
     boolean swaped;
-    int temp;
+    long temp;
     for (int i =0;i<a.length-1;++i){
       swaped = false;
       for(int j = 0; j<a.length - i - 1; ++j ){
