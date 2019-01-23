@@ -9,12 +9,9 @@ public class OnlineAdPlacement {
     long[]b = new long[]{-2,4,1};
     System.out.println(maxDotProduct(a,b));
   }
-<<<<<<< HEAD
 
-  public static long maxDotProduct(int[]a, int[] b){
-=======
   public static long maxDotProduct(long[]a, long[] b){
->>>>>>> master
+
     long res = 0;
     a= sortArray(a);
     b=sortArray(b);
