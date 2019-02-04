@@ -12,9 +12,9 @@ public class MoneyChange {
     int mod = m;
     int coins = 0;
 
-      if(mod>=10){
-        coins += mod/10;
-        mod = m%10;
+      if(mod>=6){
+        coins += mod/6;
+        mod = m%6;
       }
       if(mod>=5) {
         coins += mod / 5;

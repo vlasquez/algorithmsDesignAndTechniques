@@ -5,8 +5,8 @@ public class FractionalKnapsackArray {
   public static void main(String[] args) {
     int n = 3;
     int capacity = 50;
-    int[] values = new int[]{3,60,100,120};
-    int[] weights = new int[]{50,20,50,30};
+    int[] values = new int[]{3,5000,200,10};
+    int[] weights = new int[]{9,4,3,5};
     System.out.println(getOptimalValue(capacity,values,weights));
   }
 
